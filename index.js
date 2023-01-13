@@ -10,3 +10,8 @@ function increment() {
 function save() {
     console.log(count)
 }
+
+let username = 'Per'
+let greeting = "Hi, my name is "
+myGreeting =greeting + username
+console.log(myGreeting)
