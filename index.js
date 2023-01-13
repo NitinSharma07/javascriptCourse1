@@ -1,13 +1,8 @@
 //document.getElementById("count-el").innerText = 5
+function increment() {
+    console.log("The button was clicked")
+}
 
-let bonusPoints  =50
-console.log(bonusPoints)
-bonusPoints += 50
-console.log(bonusPoints)
-bonusPoints -= 75
-console.log(bonusPoints)
-bonusPoints += 45
-console.log(bonusPoints)
 
 
 
