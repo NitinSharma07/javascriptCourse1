@@ -1,17 +1,19 @@
 //document.getElementById("count-el").innerText = 5
-let count = 0
-function increment() {
-    count += 1
-    document.getElementById("count-el").innerText = count
+// let count = 0
+// function increment() {
+//     count += 1
+//     document.getElementById("count-el").innerText = count
 
-}
+// }
 
 
-function save() {
-    console.log(count)
-}
+// function save() {
+//     console.log(count)
+// }
 
-let username = 'Per'
-let greeting = "Hi, my name is "
-myGreeting =greeting + username
-console.log(myGreeting)
+let welcomeEl = document.getElementById("welcome-el")
+let myName = "Nitin Sharma"
+let greeting = "Welcome back " + myName
+welcomeEl.innerText = greeting
+
+welcomeEl.innerText += "👋"
