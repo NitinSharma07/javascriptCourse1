@@ -11,9 +11,15 @@
 //     console.log(count)
 // }
 
-let welcomeEl = document.getElementById("welcome-el")
-let myName = "Nitin Sharma"
-let greeting = "Welcome back " + myName
-welcomeEl.innerText = greeting
-
-welcomeEl.innerText += "👋"
+let saveEl = document.getElementById("save-el")
+let countEl = document.getElementById("count-el")
+let count = 0
+function increment() {
+    count += 1
+    countEl.innerText = count
+}
+function save(){
+    record = count + " - " 
+    saveEl.innerText += record
+    console.log(count)
+}
