@@ -1,4 +1,5 @@
-/* let firstCard = 10
+/* 
+let firstCard = 10
 let secondCard = 9
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard 
@@ -15,6 +16,8 @@ cardEl = document.querySelector("#card-el")
 function newCard() {
     let newCard  = 2
     console.log("Drawing a new card from the deck.")
+    cards.push(newCard)
+    console.log(cards)
     sum += newCard
     renderGame()
 }
@@ -24,8 +27,7 @@ function startGame() {
 }
 
 function renderGame() {
-    // cardEl.textContent = "Cards: "
-    // sumEl.textContent = "Sum: "
+    
     cardEl.textContent = "Cards: " +  cards[0] + ", " + cards[1] 
     sumEl.textContent = "Sum: "  +  sum
     if (sum < 21) {    
@@ -38,28 +40,15 @@ function renderGame() {
         isAlive = false
     }
     messageEl.textContent = message
-} */
+}
+ */
 
+// //       START      FINISH      STEP SIZE
+// for (let count = 10; count < 21; count += 1) {
+//     console.log(count)
+// }
+let sentence  = ["Hi", "Nitin"]
+for (let i = 0; i<sentence.length; i += 1) {
+    greetingEl.textContent += sentence[i] + " "
+}
 
-
-let featuredPosts = ["Check out my Netflix clone",
-    "Here's the code for my project" ,
-    "I've just relaunched my portfolio"
-]
-console.log(featuredPosts)
-
-let per = ["Pe Haral Borgen", 35, true]
-
-let messages = [
-    "Hey, how's it going?",
-    "I'm great, thank you! How about you?",
-    "All good. Been working on my portfolio lately."
-]
-let newMessage = "Same here!"
-messages.push(newMessage)
-console.log(messages)
-
-messages.pop()
-console.log(messages)
-messages.pop()
-console.log(messages)
