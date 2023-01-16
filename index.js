@@ -1,4 +1,4 @@
-let firstCard = 10
+/* let firstCard = 10
 let secondCard = 9
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard 
@@ -38,10 +38,28 @@ function renderGame() {
         isAlive = false
     }
     messageEl.textContent = message
-}
+} */
 
 
 
+let featuredPosts = ["Check out my Netflix clone",
+    "Here's the code for my project" ,
+    "I've just relaunched my portfolio"
+]
+console.log(featuredPosts)
 
+let per = ["Pe Haral Borgen", 35, true]
 
+let messages = [
+    "Hey, how's it going?",
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately."
+]
+let newMessage = "Same here!"
+messages.push(newMessage)
+console.log(messages)
 
+messages.pop()
+console.log(messages)
+messages.pop()
+console.log(messages)
