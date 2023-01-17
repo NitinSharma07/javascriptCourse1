@@ -66,3 +66,21 @@ function renderGame() {
 }
   */
 
+let course = {
+    title : "Learn CSS Grid for free.",
+    lessons : 16,
+    length : 1,
+    creator : "Nitin Sharma",
+    level : 2,
+    isFree: true,
+    tags: ["html", "css"]
+}
+
+
+let listing = {
+    cost : 90,
+    location : "Central London",
+    placesToVisit : ["historical", 'beaches'],
+    underBudget : true
+}
+
