@@ -1,18 +1,23 @@
-/* let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard 
-
+/* let cards = []
+let sum = 0
+console.log(cards)
 let message = ""
 let hasBlackjack = false
-let isAlive = true
+let isAlive = false
 
 messageEl = document.getElementById("message-el")
 sumEl = document.querySelector("#sum-el")
 cardEl = document.querySelector("#card-el")
 
 function getRandomCard() {
-    return 5
+    let randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber === 1) {
+        return 11
+    } else if ( randomNumber > 10) {
+        return 10
+    } else {
+        return randomNumber 
+    }
 }
 
 function newCard() {
@@ -25,6 +30,12 @@ function newCard() {
 }
 
 function startGame() {
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards.push(firstCard)
+    cards.push(secondCard)
+    sum = firstCard + secondCard
     renderGame()
 }
 
@@ -36,7 +47,7 @@ function renderGame() {
     sumEl.textContent = "Sum: "  +  sum
     if (sum < 21) {    
         message = "Do you want to draw a new card?"
-    } else if (sum === 21) {
+    } else if (sum == 21) {
         message = "wohoo! You've got Blackjack!"
         hasBlackjack = true    
     } else {
@@ -45,19 +56,15 @@ function renderGame() {
     }
     messageEl.textContent = message
 }
+
  */
+let likesDocumentaries = false
+let likesStartups  = true
 
-let randomNumber = Math.random() * 6  // 0.0000 to 5.9999999
-console.log(randomNumber)
-
-let floorNumber = Math.floor(randomNumber) +1
-console.log(floorNumber)   // 0.0000 to 5.999999
-
-function rollDice() {
-    return floorNumber 
+if (likesDocumentaries || likesStartups) {
+    recommendMovie()
 }
 
-let diceNum = rollDice()
-console.log(diceNum)
-
-
+function recommendMovie() {
+    console.log("Hey, check out this new film we think you will like.")
+}
