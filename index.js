@@ -1,13 +1,19 @@
 /* let cards = []
 let sum = 0
-console.log(cards)
 let message = ""
 let hasBlackjack = false
 let isAlive = false
 
+let player = {
+    name : "Per",
+    chips : 145
+}
+
 messageEl = document.getElementById("message-el")
 sumEl = document.querySelector("#sum-el")
 cardEl = document.querySelector("#card-el")
+let playerEl = document.querySelector("#player-el")
+playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
@@ -21,12 +27,14 @@ function getRandomCard() {
 }
 
 function newCard() {
-    let newCard  = getRandomCard()
-    console.log("Drawing a new card from the deck.")
-    cards.push(newCard)
-    
-    sum += newCard
-    renderGame()
+    if (isAlive && hasBlackjack === false) {
+        let newCard  = getRandomCard()
+        console.log("Drawing a new card from the deck.")
+        cards.push(newCard)
+        
+        sum += newCard
+        renderGame()
+    }
 }
 
 function startGame() {
@@ -56,15 +64,5 @@ function renderGame() {
     }
     messageEl.textContent = message
 }
+  */
 
- */
-let likesDocumentaries = false
-let likesStartups  = true
-
-if (likesDocumentaries || likesStartups) {
-    recommendMovie()
-}
-
-function recommendMovie() {
-    console.log("Hey, check out this new film we think you will like.")
-}
