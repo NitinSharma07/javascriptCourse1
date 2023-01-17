@@ -1,6 +1,5 @@
-/* 
-let firstCard = 10
-let secondCard = 9
+/* let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard 
 
@@ -9,15 +8,18 @@ let hasBlackjack = false
 let isAlive = true
 
 messageEl = document.getElementById("message-el")
-// sumEl = document.getElementById("sum-el")
 sumEl = document.querySelector("#sum-el")
 cardEl = document.querySelector("#card-el")
 
+function getRandomCard() {
+    return 5
+}
+
 function newCard() {
-    let newCard  = 2
+    let newCard  = getRandomCard()
     console.log("Drawing a new card from the deck.")
     cards.push(newCard)
-    console.log(cards)
+    
     sum += newCard
     renderGame()
 }
@@ -27,8 +29,10 @@ function startGame() {
 }
 
 function renderGame() {
-    
-    cardEl.textContent = "Cards: " +  cards[0] + ", " + cards[1] 
+    cardEl.textContent = "Cards: "
+    for (let i =0; i<cards.length; i += 1) {
+        cardEl.textContent += cards[i] + " "
+    } 
     sumEl.textContent = "Sum: "  +  sum
     if (sum < 21) {    
         message = "Do you want to draw a new card?"
@@ -43,12 +47,17 @@ function renderGame() {
 }
  */
 
-// //       START      FINISH      STEP SIZE
-// for (let count = 10; count < 21; count += 1) {
-//     console.log(count)
-// }
-let sentence  = ["Hi", "Nitin"]
-for (let i = 0; i<sentence.length; i += 1) {
-    greetingEl.textContent += sentence[i] + " "
+let randomNumber = Math.random() * 6  // 0.0000 to 5.9999999
+console.log(randomNumber)
+
+let floorNumber = Math.floor(randomNumber) +1
+console.log(floorNumber)   // 0.0000 to 5.999999
+
+function rollDice() {
+    return floorNumber 
 }
+
+let diceNum = rollDice()
+console.log(diceNum)
+
 
