@@ -3,16 +3,17 @@ let sum = 0
 let message = ""
 let hasBlackjack = false
 let isAlive = false
-
 let player = {
     name : "Per",
-    chips : 145
+    chips : 145,
+    
 }
 
-messageEl = document.getElementById("message-el")
-sumEl = document.querySelector("#sum-el")
-cardEl = document.querySelector("#card-el")
+let messageEl = document.getElementById("message-el")
+let sumEl = document.querySelector("#sum-el")
+let cardEl = document.querySelector("#card-el")
 let playerEl = document.querySelector("#player-el")
+
 playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
@@ -64,23 +65,7 @@ function renderGame() {
     }
     messageEl.textContent = message
 }
-  */
-
-let course = {
-    title : "Learn CSS Grid for free.",
-    lessons : 16,
-    length : 1,
-    creator : "Nitin Sharma",
-    level : 2,
-    isFree: true,
-    tags: ["html", "css"]
-}
+ */
 
 
-let listing = {
-    cost : 90,
-    location : "Central London",
-    placesToVisit : ["historical", 'beaches'],
-    underBudget : true
-}
 
