@@ -1,24 +1,16 @@
-let myLeads  = '["www.example.com"]'
-myLeads=  JSON.parse(myLeads)
-myLeads.push("www.example2.com")
-myLeads = JSON.stringify(myLeads)
-console.log(myLeads)
-console.log(typeof(myLeads))
-
+let myLeads  = []
 const inputEl = document.querySelector("#input-el")
 const inputBtn = document.querySelector("#input-btn")
 const ulEl = document.querySelector("#ul-el")
-
-// localStorage.setItem("name", "Nitin Sharma")
-console.log(localStorage.getItem("name"))
-localStorage.clear()
-
-
+let myLocalLeads = JSON.parse(localStorage.getItem("myLeads"))
+console.log(myLocalLeads)
 
 inputBtn.addEventListener('click', function() {
     myLeads.push(inputEl.value)
-    renderLeads()
     inputEl.value =""
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    renderLeads()
+    console.log(localStorage.getItem("myLeads"))
 }) 
 
 function renderLeads() {
