@@ -1,4 +1,8 @@
-let myLeads  = []
+let myLeads  = '["www.example.com"]'
+myLeads = JSON.parse(myLeads)
+myLeads.push("www.epiclead.com")
+console.log(myLeads)
+
 const inputEl = document.querySelector("#input-el")
 const inputBtn = document.querySelector("#input-btn")
 const ulEl = document.querySelector("#ul-el")
